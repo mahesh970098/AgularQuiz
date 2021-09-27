@@ -1,0 +1,58 @@
+<div class="container-fliud imageback">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="frm">
+
+      <h4>LOGIN </h4>
+       <form name="addform" #addform="ngForm" (ngSubmit)= "addform.form.valid && addmessage(addform)">
+
+      <div style="padding-bottom: 50px;">
+        <label>NAME</label>
+        <input type="text" placeholder="Enter your Name .Gmail"class="form-control" name="name" #name="ngModel" [(ngModel)]="feed.name" required >
+        <span *ngIf= "(name.errors?.required && name.touched)||(name.errors?.required && addform .submitted)"style="color:red;">please enter your name</span>
+
+      </div>
+
+
+
+      <div>
+        <label>password</label>
+        <input type="text" placeholder="Enter password"class="form-control" name="password" #password="ngModel" [(ngModel)]="feed.password" required>
+        <span *ngIf= "(password.errors?. required && password.touched ) || (password.errors?.required && addform.submitted)" style="color: red;">please enter correct password</span>
+      </div>
+
+
+      <!-- <div>
+        <label>Conform password</label>
+        <input type="text" placeholder="conform password" class="form-control" name="password" #password="ngModel" [(ngModel)]="feed.password" required>
+        <span *ngIf= "(password.errors?. required && password.touched)||(password.errors?.required && addform.submitted)" style="color: red;">confirm password</span>
+
+      </div> -->
+
+      <div class="check">
+      <div class="checkboxx">
+
+
+        <input type="checkbox"  class="form-control" name="checkbox" #checkbox="ngModel" [(ngModel)]="feed.checkbox" required>
+
+        <span *ngIf="(checkbox.errors?. required && checkbox.touched)||(checkbox.errors?.required && addform.submitted)" style="color: red;">t&c apply</span>
+
+
+      </div>
+      </div>
+
+
+<br>
+      <div>
+        <a class="nav-link active" [routerLink]="['/quiz']" routerLinkActive="router-link-active">
+        <input type="submit" value="submit" class="btn btn-outline-info"  [disabled]="!addform.valid"></a>
+      </div>
+
+    </form>
+
+
+
+
+    </div>
+  </div>
+</div>

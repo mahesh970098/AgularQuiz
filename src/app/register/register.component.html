@@ -1,0 +1,125 @@
+<!-- <div class="formreg">
+
+  <div class="row">
+    <div class="col s6 offset-s3">
+    <div class="card">
+      <div class="col s6">
+        <h2>Quiz Login</h2>
+      </div>
+      <div class="col s6">
+
+      </div>
+      <br>
+      <br>
+
+          <div class="card-contents">
+              <form #registerForm="ngForm" (ngSubmit)="OnSubmit(name.value,Email.value)" >
+
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <i class="material-icons prefix">account_circle</i>
+                        <input type="text" name="Name" #name ngModel required>
+                        <label>Name</label>
+                      </div>
+
+                    </div>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <i class="fas fa-user-alt fa-2x"></i>
+                        <input type="text" name="Email" #Email ngModel required  [pattern]="Validatorspattern" >
+                        <label>Email</label>
+                      </div>
+
+                    </div>
+                    <div class="row">
+                      <div class="input-field col s12">
+                        <button class="btn-large btn-submit" type="sumbit" [disabled]="!registerForm.valid">Start</button>
+
+                      </div>
+
+
+                    </div>
+
+
+                    <div class="row">
+                    <a class="nav-link active" [routerLink]="['/singup']" routerLinkActive="router-link-active">
+                      <input type="submit" name="" value="singup" href="#"></a>
+
+                      <a class="nav-link active" [routerLink]="['/singup']" routerLinkActive="router-link-active">
+                        <input type="submit" name="" value="login" href="#"></a>
+
+                    </div>
+              </form>
+          </div>
+      </div>
+
+</div>
+</div> -->
+<div class="loginform">
+
+  <section class="h-100 gradient-form" style="background-color: #eee;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xl-10">
+          <div class="card rounded-3 text-black">
+            <div class="row g-0">
+              <div class="col-lg-6">
+                <div class="card-body p-md-5 mx-md-4">
+
+                  <div class="text-center">
+                    <img src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-login-form/lotus.png" style="width: 185px;" alt="logo">
+                    <h4 class="mt-1 mb-5 pb-1">QUIZ DEMO</h4>
+                  </div>
+
+                  <form #registerForm="ngForm" (ngSubmit)="OnSubmit(name.value,Email.value)">
+                    <p>DEMO</p>
+
+                    <div class="form-outline mb-4">
+                      <input type="Text" id="form2Example11" class="form-control" placeholder="Phone number or email address" name="Name" #name ngModel required/>
+                      <label class="form-label" for="form2Example11">Username</label>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                      <input type="Email" id="form2Example22" class="form-control" placeholder="please enter your email"name="Email" #Email ngModel required  [pattern]="Validatorspattern" />
+                      <label class="form-label" for="form2Example22">Email</label>
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-center pb-4">
+                       <a class="nav-link active" [routerLink]="['/quiz']" routerLinkActive="router-link-active">
+                      <button class="btn btn-outline-warning" type="button" [disabled]="!registerForm.valid">Start</button></a>
+
+                      </div>
+
+                    <div class="d-flex align-items-center justify-content-center pb-4">
+                      <p class="mb-0 me-2">Alredy have account</p>
+                      <a class="nav-link active" [routerLink]="['/login']" routerLinkActive="router-link-active">
+                      <button type="button" class="btn btn-outline-danger">LOG IN</button></a>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center pb-4">
+                      <p class="mb-0 me-2"> Create New Account</p>
+                      <a class="nav-link active" [routerLink]="['/singup']" routerLinkActive="router-link-active">
+                      <button type="button" class="btn btn-outline-danger">Sing In!</button></a>
+                    </div>
+
+                  </form>
+
+                </div>
+              </div>
+              <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                  <h4 class="mb-4">We are Conducting a DEMO Quiz</h4>
+                  <p class="small mb-0">Please fill your Detils (Name ,Gmail )on Demo Quiz.After Giving the name & Gmail Start button will Enable.  You have a an account on Quiz please Click LOgin or You can create a new one By Clicking signup</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</div>
+
+
+<app-footer></app-footer>

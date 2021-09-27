@@ -1,0 +1,15 @@
+
+
+
+
+.word{
+  background-image: url("../../assets/pexels-johannes-plenio-2850287.jpg");
+  background-color: #838ace;
+  height: 600px;
+  width:100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+}
